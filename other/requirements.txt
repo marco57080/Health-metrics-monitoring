@@ -1,0 +1,4 @@
+numpy
+grpcio
+h5py
+protobuf

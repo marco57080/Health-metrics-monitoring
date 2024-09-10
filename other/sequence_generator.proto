@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service SequenceGenerator {
+  rpc GenerateSequence(SequenceRequest) returns (SequenceResponse);
+}
+
+message SequenceRequest {
+  int32 length = 1;
+}
+
+message SequenceResponse {
+  repeated double sequence = 1;
+}
