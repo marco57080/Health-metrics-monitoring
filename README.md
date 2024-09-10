@@ -12,8 +12,8 @@ docker-compose up -d
 Run the frontend
 
 ```
-pnpm install
-pnpm run dev
+npm install
+npm run dev
 ```
 
 Run the backend
@@ -22,26 +22,25 @@ Run the backend
 mvn spring-boot:run
 ```
 
-To test the functionaility of the data streaming and monitroing service, start the gRPC server first.
+To test the functionality of the data streaming and monitoring service, start the gRPC server first
 
 ```
 npm install
 python install -r requirement.txt
-python3 seq_gen.py
+python seq_gen.py
 node seq_gen.js
 ```
 
-Next, create stream and table manually in ksqlDB cli, refer to `ksqlDB_init.sql`.
+Next, create stream and table manually in ksqlDB cli, refer to `ksqlDB_init.sql`
 
-To run the monitoring service and test it with simulated input, run following scripts with Node.js
+To run the monitoring service and test it with simulated input, run the following scripts with Node.js
 
 ```
 node kafka_consumer_metric_monitoring.js
 node kafka_producer_healthRecord.js
 ```
 
-Modify the function arguments in `kafka_producer_healthRecord.js` to adjust the frequency of the simulated signal.
-
+To adjust the frequency of the simulated signal, modify the function arguments in `kafka_producer_healthRecord.js`
 
 ## Acknowledgments 
 
